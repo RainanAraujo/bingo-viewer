@@ -29,7 +29,7 @@ export default function Viewer() {
 
   return (
     <main
-      className={`flex min-h-screen flex-col items-center justify-center p-2 gap-4 ${inter.className}`}
+      className={`flex min-h-screen flex-col items-center justify-center p-[2vh] gap-[2vh] ${inter.className}`}
     >
       {!showAll && (
         <Ball key={bollsSorted[0]} className="!h-[50vh] !text-[30vh]">
@@ -40,7 +40,7 @@ export default function Viewer() {
       {showAll ? (
         <div
           className="max-h-min justify-center  flex flex-wrap gap-x-[0.9vh] 
-            border-red-700 border-2 no-scrollbar py-[2vh] rounded-[4vh] cursor-pointer"
+            border-red-700 border-[0.4vh] no-scrollbar py-[2vh] rounded-[4vh] cursor-pointer"
           onClick={() => setShowAll(!showAll)}
         >
           {bollsSorted.map((bola, index) => (
@@ -55,8 +55,9 @@ export default function Viewer() {
         </div>
       ) : (
         <div
-          className="max-h-min justify-center  flex gap-[0.9vh] 
-            border-red-700 border-2 no-scrollbar p-[1vh]  rounded-full  cursor-pointer"
+          className="max-h-min justify-center  flex  gap-[0.9vh] 
+            border-red-700 border-[0.4vh] no-scrollbar p-[1vh]  rounded-full  cursor-pointer
+            "
           onClick={() => {
             setShowAll(!showAll);
           }}

@@ -5,7 +5,7 @@ interface BallProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function Ball({ ...props }: BallProps) {
   return (
     <div
-      className={`rounded-full shadow-[inset_0_-2px_10px_#1c1b1b30] 
+      className={`rounded-full shadow-[inset_0_-2vh_5vh_#1c1b1b30] 
       bg-white h-[20vh] aspect-square flex 
       ${!props.noAnimation && "animate-pulseIn"}
       text-pink-950
