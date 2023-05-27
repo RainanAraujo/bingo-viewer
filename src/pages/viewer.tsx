@@ -44,12 +44,12 @@ export default function Viewer() {
           onClick={() => setShowAll(!showAll)}
         >
           {bollsSorted.map((bola, index) => (
-            <div key={index} className="flex flex-col items-center gap-[1vh] ">
+            <div key={bola} className="flex flex-col items-center gap-[1vh] ">
               <p className="h-[3vh] text-[2.5vh] font-medium text-red-700">
                 {index == 0 && "●"}
               </p>
 
-              <Ball key={index}>{bola}</Ball>
+              <Ball>{bola}</Ball>
             </div>
           ))}
         </div>
@@ -62,7 +62,9 @@ export default function Viewer() {
           }}
         >
           {bollsSorted.slice(1, 10).map((bola, index) => (
-            <Ball key={index}>{bola}</Ball>
+            <Ball key={bola} noAnimation>
+              {bola}
+            </Ball>
           ))}
         </div>
       )}
